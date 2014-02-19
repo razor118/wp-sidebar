@@ -18,16 +18,17 @@ namespace SidebarWP8
 
         #region DependencyProperties
 
-        public static DependencyProperty HeaderObjectProperty = DependencyProperty.Register("HeaderContent", typeof(object), typeof(SidebarControl), null);
 
-        /// <summary>
-        /// Gets or sets the header text
-        /// </summary>
+
         public object HeaderContent
         {
-            get { return GetValue(HeaderObjectProperty) as string; }
-            set { SetValue(HeaderObjectProperty, value); }
+            get { return (object)GetValue(HeaderContentProperty); }
+            set { SetValue(HeaderContentProperty, value); }
         }
+
+        // Using a DependencyProperty as the backing store for HeaderContentProperty.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty HeaderContentProperty =
+            DependencyProperty.Register("HeaderContent", typeof(object), typeof(SidebarControl), new PropertyMetadata(null));
 
         public static DependencyProperty HeaderTemplateProperty = DependencyProperty.Register("HeaderTemplate", typeof(DataTemplate), typeof(SidebarControl), null);
 

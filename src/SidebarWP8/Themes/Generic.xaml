@@ -96,7 +96,7 @@
                                         </ContentControl>
                                         
                                     </Button>
-                                    <ContentControl Content="{TemplateBinding HeaderText}"
+                                    <ContentControl Content="{TemplateBinding HeaderContent}"
                                                     ContentTemplate="{TemplateBinding HeaderTemplate}"
                                                     VerticalAlignment="Center"
                                                     Foreground="{TemplateBinding HeaderForeground}"
